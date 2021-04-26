@@ -16,7 +16,9 @@
   "permissions": [
 		"webRequest", "webRequestBlocking"
   ],
-  "icons": { },
+  "icons": {
+    "500": "asset/logo-500.png"
+  },
   "background": {
     "scripts": ["background.js"]
   }
