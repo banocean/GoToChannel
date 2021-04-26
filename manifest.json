@@ -16,5 +16,8 @@
   "permissions": [
 		"webRequest", "webRequestBlocking"
   ],
-  "icons": { }
+  "icons": { },
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
