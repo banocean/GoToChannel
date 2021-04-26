@@ -1,0 +1,20 @@
+{
+  "name": "GoToChannel",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [{
+    "matches": [
+      "*://youtube.com/*",
+      "*://*.youtube.com/*",
+      "*://www.youtube.com/*",
+		  "*://youtu.be/*",
+      "*://www.youtu.be/*",
+      "*://*.youtu.be/*"
+    ],
+    "js": ["index.js"] 
+  }],
+  "permissions": [
+		"webRequest", "webRequestBlocking"
+  ],
+  "icons": { }
+}
