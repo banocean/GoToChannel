@@ -4,3 +4,9 @@ browser.runtime.onInstalled.addListener((e) => {
         url: "https://oceaann.github.io/gotochannel"
     });
 });
+
+browser.browserAction.onClicked.addListener(() => {
+    browser.tabs.create({
+        url: "https://oceaann.github.io/gotochannel"
+    });
+});
