@@ -1,20 +1,17 @@
-console.log("test")
-
 const configs = {
     menuItems: [[(ch) => `/channel/${ch.channelId}`, "Visit Channel", "ACCOUNT_BOX"]],
     messages_limit: 500
-}
+};
 
 const originalFetch = window.fetch;
 
-const channels = []
+const channels = [];
 
 const commentActionExtract = (a) => {
 
     if (a.replayChatItemAction) {
-        a.replayChatItemAction.actions.forEach(commentActionExtract);
-        return;
-    }
+        return a.replayChatItemAction.actions.forEach(commentActionExtract);
+    };
 
     if(!a.addChatItemAction) return;
 
@@ -29,7 +26,7 @@ const commentActionExtract = (a) => {
         contextMenuEndpointParams: item.contextMenuEndpoint.liveChatItemContextMenuEndpoint.params
     });
 
-}
+};
 
 const callback = async (e) => {
 
@@ -67,7 +64,7 @@ const callback = async (e) => {
                 }
             });
 
-        })
+        });
 
         const newResponse = JSON.stringify(response);
 
@@ -76,7 +73,7 @@ const callback = async (e) => {
     };
 
     return textReturn;
-}
+};
 
 window.fetch = async (...args) => {
 
@@ -87,13 +84,13 @@ window.fetch = async (...args) => {
         result.json = function() {
             return new Promise(function(resolve, reject) {
                 resolve(JSON.parse(response));
-            })
+            });
         };
     
         result.text = function() {
             return new Promise(function(resolve, reject) {
                 resolve(response);
-            })
+            });
         };
     
         return result;
@@ -102,5 +99,5 @@ window.fetch = async (...args) => {
 
         return console.log(e);
 
-    }
-}
+    };
+};
