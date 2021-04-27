@@ -1,2 +1,2 @@
-## Credits
-### https://github.com/zerodytrash/YouTube-Livechat-Channel-Resolver
+## Installation
+Firefox - https://addons.mozilla.org/en-US/firefox/addon/gotochannel
