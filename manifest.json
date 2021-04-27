@@ -11,7 +11,8 @@
       "*://www.youtu.be/*",
       "*://*.youtu.be/*"
     ],
-    "js": ["index.js"] 
+    "js": ["index.js"] ,
+    "all_frames": true
   }],
   "permissions": [
 		"webRequest", "webRequestBlocking"
