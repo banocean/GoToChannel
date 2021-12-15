@@ -7,16 +7,14 @@
       "*://youtube.com/*",
       "*://*.youtube.com/*",
       "*://www.youtube.com/*",
-		  "*://youtu.be/*",
+      "*://youtu.be/*",
       "*://www.youtu.be/*",
       "*://*.youtu.be/*"
     ],
     "js": ["index.js"] ,
     "all_frames": true
   }],
-  "permissions": [
-		"webRequest", "webRequestBlocking"
-  ],
+  "web_accessible_resources": ["modules/*"],
   "icons": {
     "500": "asset/logo-500.png"
   },
