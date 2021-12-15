@@ -36,7 +36,8 @@ const callback = async (e) => {
     if(e.url.startsWith("https://www.youtube.com/youtubei/v1/live_chat/get_live_chat") || e.url.startsWith("https://www.youtube.com/youtubei/v1/live_chat/get_live_chat_replay")) {
 
         const channelIDs = response.continuationContents ? response.continuationContents.liveChatContinuation.actions : response.contents.liveChatRenderer.actions;
-        channelIDs.forEach(commentActionExtract)
+        if(!channelIDs) return textReturn;
+        channelIDs.forEach(commentActionExtract);
 
     };
 
