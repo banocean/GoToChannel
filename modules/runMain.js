@@ -39,9 +39,7 @@ const callback = async (e) => {
         if(!channelIDs) return textReturn;
         channelIDs.forEach(commentActionExtract);
 
-    };
-
-    if(e.url.startsWith("https://www.youtube.com/youtubei/v1/live_chat/get_item_context_menu")) {
+    } else if(e.url.startsWith("https://www.youtube.com/youtubei/v1/live_chat/get_item_context_menu")) {
 
         if(response === null) return textReturn;
 
